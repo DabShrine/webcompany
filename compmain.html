@@ -13,6 +13,10 @@
     <title>Title</title>
 
     <style>
+          html {
+            height: auto;
+            min-height: 150%;
+        }
         p {
             background-color:antiquewhite;
             .center {
@@ -22,18 +26,51 @@
             }
         }
         body {
-             background-image: url('bgcloud.jpg');
-             background-size:fit;
+            background: linear-gradient(rgba(0,0,255,.9), rgba(0,0,255,.1));
         }
+        #stretch {
+            height: 2000px;
+        }
+        .dropbtn {
+            background-color: rgba(0,0,255,0);
+            color: white;
+            border: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+/* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+/* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropdown-content {display: block;}
     </style>
 </head>
 <body>
-    <div style= "position: static; background-color:blue;">
     <img src="vl2.png" alt="VL" width="300" id="center">
-    <a href="#" style=" color:white; text-decoration: none; text-align: end;"> Our Mission </a>
-    <a href="#" style=" color:white; text-decoration: none; text-align: end;"> Careers </a>
-    <a href="#" style=" color:white; text-decoration: none; text-align: end;"> Products </a>
-    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Products</button>
+        <div class="dropdown-content">
+          <a href="#">Product 1</a>
+          <a href="#">Product 2</a>
+        </div>
+      </div>
+      <a href="#" style=" color:white; text-decoration: none; text-align: end;"> Our Mission </a>
+      <a href="#" style=" color:white; text-decoration: none; text-align: end;"> Careers </a>
 
 
     <!--    <p>Click <a href="http://google.com">here</a> to visit Google.</p>
